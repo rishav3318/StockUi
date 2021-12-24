@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "511072c6-feab-437f-9734-1da9900fde2c",
+		"name": "PreferredStocks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"bhaskabatla\",\r\n    \"email\":\"yella1@gmail.com\",\r\n    \"password\":\"@123aA\",\r\n    \"Role\":[\"user\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stock-backend-urtjok3rza-wl.a.run.app/api/auth/signup",
+					"protocol": "https",
+					"host": [
+						"stock-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\":\"abcd@domain.com\",\r\n    \"password\":\"@123aA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stock-backend-urtjok3rza-wl.a.run.app/api/auth/signin",
+					"protocol": "https",
+					"host": [
+						"stock-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add data to watchlist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmNkQGRvbWFpbi5jb20iLCJpYXQiOjE2NDAxNzgxNTIsImV4cCI6MTY0MDI2NDU1Mn0.NuK1mD0D_qug7hmy4reXIJu0nIk28L9SGHJM3zquiMEM30YfdEVCcYa8cgujl_NRJgbQRQ8gnV_0hVKnZT1gmw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"symbol\":\"AMZN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stock-backend-urtjok3rza-wl.a.run.app/watchlist/user/16/add",
+					"protocol": "https",
+					"host": [
+						"stock-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"watchlist",
+						"user",
+						"16",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get data from Watchlist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmNkQGRvbWFpbi5jb20iLCJpYXQiOjE2NDAxNzgxNTIsImV4cCI6MTY0MDI2NDU1Mn0.NuK1mD0D_qug7hmy4reXIJu0nIk28L9SGHJM3zquiMEM30YfdEVCcYa8cgujl_NRJgbQRQ8gnV_0hVKnZT1gmw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://stock-backend-urtjok3rza-wl.a.run.app/watchlist/user/16/get",
+					"protocol": "https",
+					"host": [
+						"stock-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"watchlist",
+						"user",
+						"16",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete from watchList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmNkQGRvbWFpbi5jb20iLCJpYXQiOjE2NDAxNzgxNTIsImV4cCI6MTY0MDI2NDU1Mn0.NuK1mD0D_qug7hmy4reXIJu0nIk28L9SGHJM3zquiMEM30YfdEVCcYa8cgujl_NRJgbQRQ8gnV_0hVKnZT1gmw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://stock-backend-urtjok3rza-wl.a.run.app/watchlist/user/16/watch/2",
+					"protocol": "https",
+					"host": [
+						"stock-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"watchlist",
+						"user",
+						"16",
+						"watch",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter stocks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZWFuQGdtYWlsLmNvbSIsImlhdCI6MTYzMDU2ODcyOCwiZXhwIjoxNjMwNjU1MTI4fQ.hXmmYXvcFuCeFP_PkXSwCZbI4UZoiuYfBe5LOPkM4ccNblKCZOoixBhViyfnEqEVbCvcbPj4trsWfqAaH_CbNw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sectorNames\":[\"technology\"],\r\n    \"minPrice\":10,\r\n    \"maxPrice\":150,\r\n    \"minDividend\":0,\r\n    \"maxDividend\":100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stock-backend-urtjok3rza-wl.a.run.app/filterStocks",
+					"protocol": "https",
+					"host": [
+						"stock-backend-urtjok3rza-wl",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"filterStocks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
